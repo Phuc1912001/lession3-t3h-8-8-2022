@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.table-list-users {
+  height: 450px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
