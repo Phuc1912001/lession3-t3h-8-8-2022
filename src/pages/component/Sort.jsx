@@ -1,12 +1,21 @@
 import React from "react";
 
-export default function Sort() {
+export default function Sort(listOption, sortValue, handleSort) {
   return (
-    <button
-      style={{ height: "61%", marginTop: "24px", marginLeft: "10px" }}
-      className="btn btn-primary"
-    >
-      Sắp xếp lại
-    </button>
+    <div className="col-lg-9">
+      <label htmlFor="">Find By : </label>
+      <select
+        onChange={handleSort}
+        value={sortValue}
+        className="form-select keys"
+      >
+        <option>OPTION</option>
+        {listOption.map((item, index) => (
+          <option value={item} key={index}>
+            {item}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 }
