@@ -1,5 +1,7 @@
 import React from "react";
 import { data } from "../../data";
+// import { format } from "date-fns";
+// console.log(format(new Date("your date"), "dd MMM yyyy"));
 
 export default function ListUsers() {
   return (
@@ -26,9 +28,11 @@ export default function ListUsers() {
                 <td>{item.lastName}</td>
                 <td>{item.email}</td>
                 <td>{item.gender}</td>
-                <td>{item.birthday}</td>
+                <td>{`${new Date(item.birthday).getDate()}/${
+                  new Date(item.birthday).getMonth() + 1
+                }/${new Date(item.birthday).getFullYear()}`}</td>
                 <td>{item.salary}</td>
-                <td>{`(+84)${item.phone.replace(/\D/g, "")}`}</td>
+                <td>{`(+84)${item.phone.replace(/-/g, "")}`}</td>
               </tr>
             ))}
           </tbody>
