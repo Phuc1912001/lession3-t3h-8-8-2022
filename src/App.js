@@ -1,12 +1,9 @@
 
-import './App.css';
+import "./App.css";
+import SimpleWeb from "./pages/SimpleWeb";
 
 function App() {
-  return (
-    <div className="App">
-      lession 3 main 
-    </div>
-  );
+  return <SimpleWeb />;
 }
 
 export default App;
